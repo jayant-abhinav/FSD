@@ -1,3 +1,4 @@
+// Create http server to show json objects 
 const server = require("http")
 const users=[
     {"id":1, "name":"Jayant"},
