@@ -3,11 +3,7 @@ const userSchema=new mongoose.Schema({
     name:{
         type:String,require:true
     },
-    age:Number,
-    email:{
-        type:String,
-        unique:true
-    }
+    age:Number
 })
 const User=mongoose.model("User",userSchema)
 module.exports={

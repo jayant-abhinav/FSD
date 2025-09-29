@@ -3,7 +3,7 @@ async function connectDB()
 {
     try{
         await mongoose.connect(
-        "mongodb+srv://16jkumar_db_user:16jkumar2020@jayantdb.hn7cmlw.mongodb.net/?retryWrites=true&w=majority&appName=JayantDB"
+        "mongodb+srv://16jkumar_db_user:16jkumar2020@jayantdb.hn7cmlw.mongodb.net/SectionB?retryWrites=true&w=majority&appName=JayantDB"
 )
 console.log("mongodb connect")
     }

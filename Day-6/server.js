@@ -7,21 +7,33 @@ const app=express()
 app.use(express.json())
 //connect to db
 connectDB()
-app.post("/users",async(req,res)=>{
-try{
+app.post("/user",async(req,res)=>{
+   try{
 const user=new User(req.body)
 await user.save()
 res.json({
-    message:"successful loaded",
+    message:"data successfuly loaded",
     data:user
 })
-}
-catch(err){
-    res.json({
-        message:"not successful"
-    })
+   }
+   catch(err)
+   {
+    console.log(err)
+   }
 
-}
+})
+app.get("/user",async(req,res)=>{
+    try{
+const user=await User.find()
+res.json({
+    data:user
+})
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+
 })
 app.listen(4000,()=>{
 console.log("server running at port 4000")
